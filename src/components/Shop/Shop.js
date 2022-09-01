@@ -6,7 +6,6 @@ import Product from "../Product/Product";
 import "./Shop.css";
 
 const Shop = () => {
-  // const first10 = fakeData.slice(0, 10);
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
 
@@ -19,15 +18,15 @@ const Shop = () => {
   useEffect(() => {
     const savedCart = getStoredCart();
     const productKeys = Object.keys(savedCart);
-    console.log(products, productKeys);
-    if(products.length > 0){
-      const previousCart = productKeys.map(existingKey => {
-        const product = products.find(pd => pd.key === existingKey);
-        product.quantity = savedCart[existingKey];
-        return product;
-      })
-    setCart(previousCart);
-    }
+    fetch("http://localhost:5000/productsByKeys", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(productKeys)
+    })
+    .then(res => res.json())
+    .then(data => setCart(data))
   }, [products])
 
   const handleAddProduct = (product) => {
