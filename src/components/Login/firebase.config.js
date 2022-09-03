@@ -1,16 +1,10 @@
-
-
-
-
-
 const firebaseConfig = {
-  apiKey: "AIzaSyAyphLzX_4S7O-sFFmETEubnOPaeCqNPNI",
-  authDomain: "ema-john-simple-rana.firebaseapp.com",
-  projectId: "ema-john-simple-rana",
-  storageBucket: "ema-john-simple-rana.appspot.com",
-  messagingSenderId: "172308025585",
-  appId: "1:172308025585:web:f145ef26490ab1ed3b9950"
+  apiKey: "AIzaSyAfB2iHhvuR5EP4ESn1SkUFZvguu6oGy0A",
+  authDomain: "ema-john-simple-eda20.firebaseapp.com",
+  projectId: "ema-john-simple-eda20",
+  storageBucket: "ema-john-simple-eda20.appspot.com",
+  messagingSenderId: "499358667594",
+  appId: "1:499358667594:web:f2d6ea8e2852674ae827b3"
 };
 
-
-export default  firebaseConfig;
+export default firebaseConfig;
